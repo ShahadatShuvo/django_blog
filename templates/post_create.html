@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags  %}
+{% block content %}
+
+<div class="col-6 offset-3 mt-5 mb-5">
+    <div class="jumbotron">
+        <p class="text-center font-weight-bold">{{ title }} your article here...</p>
+        {{ form.media }}
+        {{ content|safe }}
+        <form method="POST" action="." enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}

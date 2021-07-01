@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/fontastic.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.blue.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.green.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.pink.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.red.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.sea.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.violet.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.default.css' %}">
+
+<html>
+{% include "head.html" %}
+<body>
+
+{% include "header.html" %}
+
+
+{% block content %}
+{% endblock content %}
+
+{% include "footer.html" %}
+{% include "scripts.html" %}
+
+</body>
+
+</html>
